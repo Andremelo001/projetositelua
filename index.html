@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title> Moon Light </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<a href="#" class="logo"> Lua </a>
+		<ul>
+			<li><a href="#" class="active">Home</a></li>
+			<li><a href="https://brasilescola.uol.com.br/geografia/lua.htm">About</a></li>
+			<li><a href="https://github.com/Andremelo001">Work</a></li>
+			<li><a href="https://www.instagram.com/andre_melo001/">Contat</a></li>
+		</ul>
+	</header>
+	<section>
+		<img src="stars.png" id="stars">
+		<img src="moon.png" id="moon">
+		<img src="mountains_behind.png" id="mountains_behind">
+		<h2 id="text">Moon Light</h2>
+		<a href="#sec" id="btn">Explore</a>
+		<img src="mountains_front.png" id="mountains_front">
+	</section>
+	<div class="sec" id="sec">
+		<h2>A luz que ilumina as noites escuras</h2>
+		<p>Na verdade, todos os lados da Lua recebem a mesma quantidade de luz solar; no entanto, apenas uma face da Lua é vista da Terra. Isso acontece porque ela gira em torno de seu próprio eixo exatamente no mesmo tempo que leva para orbitar a Terra, o que significa que o mesmo lado está sempre de frente para nós. Na verdade, todos os lados da Lua recebem a mesma quantidade de luz solar; no entanto, apenas uma face da Lua é vista da Terra. Isso acontece porque ela gira em torno de seu próprio eixo exatamente no mesmo tempo que leva para orbitar a Terra, o que significa que o mesmo lado está sempre de frente para nós.<br><br>A Lua é o único satélite natural da Terra e o quinto maior do Sistema Solar. É o maior satélite natural de um planeta no sistema solar em relação ao tamanho do seu corpo primário, tendo 27% do diâmetro e 60% da densidade da Terra, o que representa 1⁄81 da sua massa.<br><br>A Lua é o único satélite natural da Terra. Formou-se praticamente ao mesmo tempo em que a Terra com o surgimento do Universo.
+        Por sua proximidade com o planeta Terra, é o objeto maior e mais brilhante no céu noturno terrestre. Sendo a quinta maior lua do sistema solar.<br><br> </p>
+	</div>
+
+	<script>
+		let stars = document.getElementById('stars');
+		let moon = document.getElementById('moon');
+		let mountains_behind = document.getElementById('mountains_behind');
+		let text = document.getElementById('text');
+		let btn = document.getElementById('btn');
+		let mountains_front = document.getElementById('mountains_front');
+		let header = document.querySelector('header');
+
+		window.addEventListener('scroll', function(){
+			let value = window.scrollY;
+			stars.style.left = value * 0.25 + 'px';
+			moon.style.top = value * 1.05 + 'px';
+			mountains_behind.style.top = value * 0.5 + 'px';
+			mountains_front.style.top = value * 0 + 'px';
+			text.style.marginRight = value * 4 + 'px';
+			text.style.marginTop = value * 1.5 + 'px';
+			btn.style.marginTop = value * 1.5 + 'px';
+			header.style.top = value * 0.5 + 'px';
+
+		})
+
+	</script>
+</body>
+</html>
